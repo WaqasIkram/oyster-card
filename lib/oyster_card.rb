@@ -15,4 +15,8 @@ class Oystercard
       raise 'Can not exceed more than £90.'
     end
   end
+
+  def deduct(money)
+    @balance -= money
+  end
 end

@@ -33,4 +33,10 @@ let(:oystercard) { described_class.new}
   it 'raise an error if balance above maximumm limit' do
     expect{oystercard.top_up(100)}.to raise_error('Can not exceed more than £90.')
   end
+
+  it ' will deduct the money from balance'do
+    oystercard.top_up(30)
+    oystercard.deduct(10)
+    expect(oystercard.balance).to eq(20)
+  end
 end
