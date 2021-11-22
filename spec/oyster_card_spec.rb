@@ -16,5 +16,9 @@ let(:oystercard) { described_class.new}
   # In order to keep using public transport
   # As a customer
   # I want to add money to my card
+  it 'will add money to the balance 'do
+  oystercard.top_up(10)
+  expect(oystercard.balance).to eq(10)
+  end
   
 end
