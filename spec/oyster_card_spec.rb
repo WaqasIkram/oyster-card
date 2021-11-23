@@ -36,7 +36,7 @@ let(:oystercard) { described_class.new}
 
   it ' will deduct the money from balance'do
     oystercard.top_up(30)
-    oystercard.deduct(10)
+    oystercard.touch_out
     expect(oystercard.balance).to eq(20)
   end
 
@@ -58,5 +58,10 @@ let(:oystercard) { described_class.new}
   end 
   it 'will not allow journey with insufficient funds' do
     expect{oystercard.touch_in}.to raise_error(RuntimeError, 'insufficient funds') 
+  end
+
+  it 'will confirm that oyster has been charged' do
+    oystercard.top_up(30)
+    expect{oystercard.touch_out}.to change{oystercard.balance}.by -10
   end
 end
