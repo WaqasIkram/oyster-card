@@ -1,7 +1,10 @@
-require 'oyster_card'
+require'oyster_card'
 
 describe Oystercard do
 let(:oystercard) { described_class.new}
+let(:oyster1) {double :oystercard}
+let(:station) {double :station}
+
   
 # User story 
 
@@ -37,7 +40,7 @@ let(:oystercard) { described_class.new}
   it ' will deduct the money from balance'do
     oystercard.top_up(30)
     oystercard.touch_out
-    expect(oystercard.balance).to eq(20)
+    expect(oystercard.balance).to eq(29)
   end
 
   it 'will confirm it is in journey' do
@@ -46,22 +49,28 @@ let(:oystercard) { described_class.new}
 
   it 'will confirm if oyster has been touched in' do
     oystercard.top_up(30)
-    oystercard.touch_in
+    oystercard.touch_in(station)
     expect(oystercard.in_journey?).to be(true)
   end 
   
   it 'will confirm if oyster has been touched out' do
     oystercard.top_up(30)
-    oystercard.touch_in
+    oystercard.touch_in(station)
     oystercard.touch_out
     expect(oystercard.in_journey).to be(false)
   end 
   it 'will not allow journey with insufficient funds' do
-    expect{oystercard.touch_in}.to raise_error(RuntimeError, 'insufficient funds') 
+    expect{oystercard.touch_in(station)}.to raise_error(RuntimeError, 'insufficient funds') 
   end
 
   it 'will confirm that oyster has been charged' do
     oystercard.top_up(30)
-    expect{oystercard.touch_out}.to change{oystercard.balance}.by -10
+    expect{oystercard.touch_out}.to change{oystercard.balance}.by -1
+  end
+
+  it 'will remember the entry station after the touch in' do
+    oystercard.top_up(30)
+    oystercard.touch_in(station)
+    expect(oystercard.entry_station).to match_array(station)
   end
 end
