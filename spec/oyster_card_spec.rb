@@ -45,13 +45,18 @@ let(:oystercard) { described_class.new}
   end
 
   it 'will confirm if oyster has been touched in' do
+    oystercard.top_up(30)
     oystercard.touch_in
     expect(oystercard.in_journey?).to be(true)
   end 
   
   it 'will confirm if oyster has been touched out' do
+    oystercard.top_up(30)
     oystercard.touch_in
     oystercard.touch_out
     expect(oystercard.in_journey).to be(false)
   end 
+  it 'will not allow journey with insufficient funds' do
+    expect{oystercard.touch_in}.to raise_error(RuntimeError, 'insufficient funds') 
+  end
 end
