@@ -39,4 +39,19 @@ let(:oystercard) { described_class.new}
     oystercard.deduct(10)
     expect(oystercard.balance).to eq(20)
   end
+
+  it 'will confirm it is in journey' do
+    expect(oystercard.in_journey?).to be(false)
+  end
+
+  it 'will confirm if oyster has been touched in' do
+    oystercard.touch_in
+    expect(oystercard.in_journey?).to be(true)
+  end 
+  
+  it 'will confirm if oyster has been touched out' do
+    oystercard.touch_in
+    oystercard.touch_out
+    expect(oystercard.in_journey).to be(false)
+  end 
 end
