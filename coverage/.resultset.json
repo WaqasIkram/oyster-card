@@ -1,6 +1,22 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/kimmorgan/Desktop/Makers/oyster-card/spec/journey_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/kimmorgan/Desktop/Makers/oyster-card/lib/journey.rb": {
+        "lines": [
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/kimmorgan/Desktop/Makers/oyster-card/spec/oyster_card_spec.rb": {
         "lines": [
           1,
@@ -152,13 +168,16 @@
           1,
           null,
           1,
-          1,
-          1,
-          1,
           null,
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -178,6 +197,6 @@
         ]
       }
     },
-    "timestamp": 1637766088
+    "timestamp": 1637766629
   }
 }
