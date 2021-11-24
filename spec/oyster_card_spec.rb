@@ -4,8 +4,9 @@ describe Oystercard do
 let(:oystercard) { described_class.new}
 let(:oyster1) {double :oystercard}
 let(:station) {double :station}
+let(:station2) {double :station2}
 
-  
+# require './lib/oyster_card.rb' 
 # User story 
 
   # In order to use public transport
@@ -39,7 +40,7 @@ let(:station) {double :station}
 
   it ' will deduct the money from balance'do
     oystercard.top_up(30)
-    oystercard.touch_out
+    oystercard.touch_out(station2)
     expect(oystercard.balance).to eq(29)
   end
 
@@ -56,7 +57,7 @@ let(:station) {double :station}
   it 'will confirm if oyster has been touched out' do
     oystercard.top_up(30)
     oystercard.touch_in(station)
-    oystercard.touch_out
+    oystercard.touch_out(station2)
     expect(oystercard.in_journey).to be(false)
   end 
   it 'will not allow journey with insufficient funds' do
@@ -65,12 +66,26 @@ let(:station) {double :station}
 
   it 'will confirm that oyster has been charged' do
     oystercard.top_up(30)
-    expect{oystercard.touch_out}.to change{oystercard.balance}.by -1
+    expect{oystercard.touch_out(station2)}.to change{oystercard.balance}.by -1
   end
 
   it 'will remember the entry station after the touch in' do
     oystercard.top_up(30)
     oystercard.touch_in(station)
-    expect(oystercard.entry_station).to match_array(station)
+    expect(oystercard.entry_station).to eq(station)
   end
+
+  # User Story 
+  
+  # In order to know where I have been
+  # As a customer
+  # I want to see all my previous trips
+
+    it 'should show all previous trips' do
+      subject.top_up(20)
+      subject.touch_in(station)
+      subject.touch_out(station2)
+      expect(subject.journey_history).to match_array [{station=>station2}]
+    end
+    
 end

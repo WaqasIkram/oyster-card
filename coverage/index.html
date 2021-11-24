@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-11-23T16:55:51+00:00">2021-11-23T16:55:51+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-11-24T14:38:12+00:00">2021-11-24T14:38:12+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.21
+         2.38
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>62</b> relevant lines,
-    <span class="green"><b>62</b> lines covered</span> and
+    <b>69</b> relevant lines,
+    <span class="green"><b>69</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -71,24 +71,24 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#3fb0792efcf518fae27e1a182e9794d60a8f1dc2" class="src_link" title="lib/oyster_card.rb">lib/oyster_card.rb</a></td>
+            <td class="strong t-file__name"><a href="#c41019fb10e575a3200e783343ab55359223d1fe" class="src_link" title="lib/oyster_card.rb">lib/oyster_card.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">46</td>
-            <td class="cell--number">26</td>
-            <td class="cell--number">26</td>
+            <td class="cell--number">47</td>
+            <td class="cell--number">27</td>
+            <td class="cell--number">27</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.15</td>
+            <td class="cell--number">3.63</td>
             
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#7945ccff30e5a3f033394ffdf94019c0dc0151f0" class="src_link" title="spec/oyster_card_spec.rb">spec/oyster_card_spec.rb</a></td>
+            <td class="strong t-file__name"><a href="#3dfc642d23360e6b0b7a933af0738be88bf1e210" class="src_link" title="spec/oyster_card_spec.rb">spec/oyster_card_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">76</td>
-            <td class="cell--number">36</td>
-            <td class="cell--number">36</td>
+            <td class="cell--number">92</td>
+            <td class="cell--number">42</td>
+            <td class="cell--number">42</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.53</td>
+            <td class="cell--number">1.57</td>
             
           </tr>
         
@@ -109,7 +109,7 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="3fb0792efcf518fae27e1a182e9794d60a8f1dc2">
+        <div class="source_table" id="c41019fb10e575a3200e783343ab55359223d1fe">
   <div class="header">
     <h3>lib/oyster_card.rb</h3>
     <h4>
@@ -123,8 +123,8 @@
     
 
     <div class="t-line-summary">
-      <b>26</b> relevant lines.
-      <span class="green"><b>26</b> lines covered</span> and
+      <b>27</b> relevant lines.
+      <span class="green"><b>27</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -186,7 +186,7 @@
 
             
 
-            <code class="ruby">  attr_reader :balance, :in_journey, :entry_station</code>
+            <code class="ruby">  attr_reader :balance, :in_journey, :entry_station, :journey_history</code>
           </li>
         </div>
       
@@ -213,8 +213,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="8">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="11" data-linenumber="8">
+            <span class="hits">11</span>
             
 
             
@@ -224,8 +224,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="9">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="11" data-linenumber="9">
+            <span class="hits">11</span>
             
 
             
@@ -235,24 +235,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="10">
-            <span class="hits">10</span>
+          <li class="never" data-hits="" data-linenumber="10">
+            
             
 
             
 
-            <code class="ruby">    @entry_station = []</code>
+            <code class="ruby">    @entry_station</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
+          <li class="covered" data-hits="11" data-linenumber="11">
+            <span class="hits">11</span>
             
 
-            <code class="ruby">  </code>
+            
+
+            <code class="ruby">    @journey_history = []</code>
           </li>
         </div>
       
@@ -263,7 +263,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  </code>
           </li>
         </div>
       
@@ -274,12 +274,23 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
+          <li class="covered" data-hits="1" data-linenumber="15">
             <span class="hits">1</span>
             
 
@@ -290,8 +301,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="15">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="8" data-linenumber="16">
+            <span class="hits">8</span>
             
 
             
@@ -301,8 +312,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="16">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="8" data-linenumber="17">
+            <span class="hits">8</span>
             
 
             
@@ -312,7 +323,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
+          <li class="covered" data-hits="1" data-linenumber="18">
             <span class="hits">1</span>
             
 
@@ -323,24 +334,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="never" data-hits="" data-linenumber="19">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -351,12 +351,23 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
+          <li class="covered" data-hits="1" data-linenumber="22">
             <span class="hits">1</span>
             
 
@@ -367,19 +378,19 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="22">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="23">
+            <span class="hits">5</span>
             
 
             
 
-            <code class="ruby">    @entry_station &lt;&lt; station</code>
+            <code class="ruby">    @entry_station = station</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="23">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="24">
+            <span class="hits">5</span>
             
 
             
@@ -389,7 +400,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
+          <li class="covered" data-hits="1" data-linenumber="25">
             <span class="hits">1</span>
             
 
@@ -400,7 +411,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
@@ -411,7 +422,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -422,24 +433,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="27">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="4" data-linenumber="28">
+            <span class="hits">4</span>
             
 
             
 
             <code class="ruby">      @in_journey = true</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -450,35 +450,35 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
+          <li class="covered" data-hits="1" data-linenumber="31">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def touch_out</code>
+            <code class="ruby">  def touch_out(station)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="31">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    @entry_station = nil</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="32">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="4" data-linenumber="32">
+            <span class="hits">4</span>
             
 
             
@@ -488,8 +488,30 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="33">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="4" data-linenumber="33">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">    @journey_history &lt;&lt; {@entry_station=&gt;station}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="34">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">    @entry_station = nil</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="35">
+            <span class="hits">4</span>
             
 
             
@@ -499,7 +521,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
+          <li class="never" data-hits="" data-linenumber="36">
             
             
 
@@ -510,7 +532,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
+          <li class="never" data-hits="" data-linenumber="37">
             
             
 
@@ -521,7 +543,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
+          <li class="covered" data-hits="1" data-linenumber="38">
             <span class="hits">1</span>
             
 
@@ -532,7 +554,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="37">
+          <li class="covered" data-hits="2" data-linenumber="39">
             <span class="hits">2</span>
             
 
@@ -543,35 +565,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 
             
 
             <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="39">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  private</code>
           </li>
         </div>
       
@@ -593,34 +593,12 @@
 
             
 
-            <code class="ruby">   def deduct(money)</code>
+            <code class="ruby">  private</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="43">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    @balance -= money</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
@@ -631,7 +609,40 @@
         </div>
       
         <div>
+          <li class="covered" data-hits="1" data-linenumber="44">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def deduct(money)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="45">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">    @balance -= money</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="never" data-hits="" data-linenumber="46">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -646,7 +657,7 @@
 </div>
 
       
-        <div class="source_table" id="7945ccff30e5a3f033394ffdf94019c0dc0151f0">
+        <div class="source_table" id="3dfc642d23360e6b0b7a933af0738be88bf1e210">
   <div class="header">
     <h3>spec/oyster_card_spec.rb</h3>
     <h4>
@@ -660,8 +671,8 @@
     
 
     <div class="t-line-summary">
-      <b>36</b> relevant lines.
-      <span class="green"><b>36</b> lines covered</span> and
+      <b>42</b> relevant lines.
+      <span class="green"><b>42</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -728,8 +739,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="6">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="6" data-linenumber="6">
+            <span class="hits">6</span>
             
 
             
@@ -739,13 +750,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
+          <li class="covered" data-hits="5" data-linenumber="7">
+            <span class="hits">5</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">let(:station2) {double :station2}</code>
           </li>
         </div>
       
@@ -756,7 +767,7 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -767,7 +778,7 @@
 
             
 
-            <code class="ruby"># User story </code>
+            <code class="ruby"># require &#39;./lib/oyster_card.rb&#39; </code>
           </li>
         </div>
       
@@ -778,7 +789,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby"># User story </code>
           </li>
         </div>
       
@@ -789,7 +800,7 @@
 
             
 
-            <code class="ruby">  # In order to use public transport</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -800,7 +811,7 @@
 
             
 
-            <code class="ruby">  # As a customer</code>
+            <code class="ruby">  # In order to use public transport</code>
           </li>
         </div>
       
@@ -811,7 +822,7 @@
 
             
 
-            <code class="ruby">  # I want money on my card</code>
+            <code class="ruby">  # As a customer</code>
           </li>
         </div>
       
@@ -822,18 +833,18 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby">  # I want money on my card</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="15">
+            
             
 
             
 
-            <code class="ruby">  it &#39;will have balance of zero&#39; do</code>
+            <code class="ruby">  </code>
           </li>
         </div>
       
@@ -844,18 +855,18 @@
 
             
 
-            <code class="ruby">    expect(oystercard.balance).to eq(0)</code>
+            <code class="ruby">  it &#39;will have balance of zero&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(oystercard.balance).to eq(0)</code>
           </li>
         </div>
       
@@ -866,7 +877,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -877,7 +888,7 @@
 
             
 
-            <code class="ruby">  # User story </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -888,7 +899,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # User story </code>
           </li>
         </div>
       
@@ -899,7 +910,7 @@
 
             
 
-            <code class="ruby">  # In order to keep using public transport</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -910,7 +921,7 @@
 
             
 
-            <code class="ruby">  # As a customer</code>
+            <code class="ruby">  # In order to keep using public transport</code>
           </li>
         </div>
       
@@ -921,18 +932,18 @@
 
             
 
-            <code class="ruby">  # I want to add money to my card</code>
+            <code class="ruby">  # As a customer</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="24">
+            
             
 
             
 
-            <code class="ruby">  it &#39;will add money to the balance &#39;do</code>
+            <code class="ruby">  # I want to add money to my card</code>
           </li>
         </div>
       
@@ -943,7 +954,7 @@
 
             
 
-            <code class="ruby">  oystercard.top_up(10)</code>
+            <code class="ruby">  it &#39;will add money to the balance &#39;do</code>
           </li>
         </div>
       
@@ -954,18 +965,18 @@
 
             
 
-            <code class="ruby">  expect(oystercard.balance).to eq(10)</code>
+            <code class="ruby">  oystercard.top_up(10)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">  expect(oystercard.balance).to eq(10)</code>
           </li>
         </div>
       
@@ -976,7 +987,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -998,7 +1009,7 @@
 
             
 
-            <code class="ruby">  # User story </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1009,7 +1020,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # User story </code>
           </li>
         </div>
       
@@ -1020,7 +1031,7 @@
 
             
 
-            <code class="ruby">  # In order to protect my money from theft or  loss</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1031,7 +1042,7 @@
 
             
 
-            <code class="ruby">  # As a customer</code>
+            <code class="ruby">  # In order to protect my money from theft or  loss</code>
           </li>
         </div>
       
@@ -1042,7 +1053,7 @@
 
             
 
-            <code class="ruby">  # I want a maximum limit (of £90) on my card</code>
+            <code class="ruby">  # As a customer</code>
           </li>
         </div>
       
@@ -1053,12 +1064,23 @@
 
             
 
+            <code class="ruby">  # I want a maximum limit (of £90) on my card</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
             <code class="ruby">  </code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
+          <li class="covered" data-hits="1" data-linenumber="37">
             <span class="hits">1</span>
             
 
@@ -1069,7 +1091,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="37">
+          <li class="covered" data-hits="2" data-linenumber="38">
             <span class="hits">2</span>
             
 
@@ -1080,7 +1102,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -1091,24 +1113,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39; will deduct the money from balance&#39;do</code>
           </li>
         </div>
       
@@ -1119,7 +1130,7 @@
 
             
 
-            <code class="ruby">    oystercard.top_up(30)</code>
+            <code class="ruby">  it &#39; will deduct the money from balance&#39;do</code>
           </li>
         </div>
       
@@ -1130,7 +1141,7 @@
 
             
 
-            <code class="ruby">    oystercard.touch_out</code>
+            <code class="ruby">    oystercard.top_up(30)</code>
           </li>
         </div>
       
@@ -1141,18 +1152,18 @@
 
             
 
-            <code class="ruby">    expect(oystercard.balance).to eq(29)</code>
+            <code class="ruby">    oystercard.touch_out(station2)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="44">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(oystercard.balance).to eq(29)</code>
           </li>
         </div>
       
@@ -1163,18 +1174,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="46">
+            
             
 
             
 
-            <code class="ruby">  it &#39;will confirm it is in journey&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1185,18 +1196,18 @@
 
             
 
-            <code class="ruby">    expect(oystercard.in_journey?).to be(false)</code>
+            <code class="ruby">  it &#39;will confirm it is in journey&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="48">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(oystercard.in_journey?).to be(false)</code>
           </li>
         </div>
       
@@ -1207,18 +1218,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="50">
+            
             
 
             
 
-            <code class="ruby">  it &#39;will confirm if oyster has been touched in&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1229,7 +1240,7 @@
 
             
 
-            <code class="ruby">    oystercard.top_up(30)</code>
+            <code class="ruby">  it &#39;will confirm if oyster has been touched in&#39; do</code>
           </li>
         </div>
       
@@ -1240,7 +1251,7 @@
 
             
 
-            <code class="ruby">    oystercard.touch_in(station)</code>
+            <code class="ruby">    oystercard.top_up(30)</code>
           </li>
         </div>
       
@@ -1251,18 +1262,18 @@
 
             
 
-            <code class="ruby">    expect(oystercard.in_journey?).to be(true)</code>
+            <code class="ruby">    oystercard.touch_in(station)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="54">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end </code>
+            
+
+            <code class="ruby">    expect(oystercard.in_journey?).to be(true)</code>
           </li>
         </div>
       
@@ -1273,18 +1284,18 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby">  end </code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="56">
+            
             
 
             
 
-            <code class="ruby">  it &#39;will confirm if oyster has been touched out&#39; do</code>
+            <code class="ruby">  </code>
           </li>
         </div>
       
@@ -1295,7 +1306,7 @@
 
             
 
-            <code class="ruby">    oystercard.top_up(30)</code>
+            <code class="ruby">  it &#39;will confirm if oyster has been touched out&#39; do</code>
           </li>
         </div>
       
@@ -1306,7 +1317,7 @@
 
             
 
-            <code class="ruby">    oystercard.touch_in(station)</code>
+            <code class="ruby">    oystercard.top_up(30)</code>
           </li>
         </div>
       
@@ -1317,7 +1328,7 @@
 
             
 
-            <code class="ruby">    oystercard.touch_out</code>
+            <code class="ruby">    oystercard.touch_in(station)</code>
           </li>
         </div>
       
@@ -1328,12 +1339,23 @@
 
             
 
+            <code class="ruby">    oystercard.touch_out(station2)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="61">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(oystercard.in_journey).to be(false)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="61">
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
@@ -1344,7 +1366,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="62">
+          <li class="covered" data-hits="1" data-linenumber="63">
             <span class="hits">1</span>
             
 
@@ -1355,7 +1377,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="63">
+          <li class="covered" data-hits="2" data-linenumber="64">
             <span class="hits">2</span>
             
 
@@ -1366,7 +1388,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="64">
+          <li class="never" data-hits="" data-linenumber="65">
             
             
 
@@ -1377,24 +1399,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="never" data-hits="" data-linenumber="66">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="66">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;will confirm that oyster has been charged&#39; do</code>
           </li>
         </div>
       
@@ -1405,29 +1416,29 @@
 
             
 
+            <code class="ruby">  it &#39;will confirm that oyster has been charged&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="68">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    oystercard.top_up(30)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="68">
+          <li class="covered" data-hits="4" data-linenumber="69">
             <span class="hits">4</span>
             
 
             
 
-            <code class="ruby">    expect{oystercard.touch_out}.to change{oystercard.balance}.by -1</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="69">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
+            <code class="ruby">    expect{oystercard.touch_out(station2)}.to change{oystercard.balance}.by -1</code>
           </li>
         </div>
       
@@ -1438,18 +1449,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="71">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="71">
+            
             
 
             
 
-            <code class="ruby">  it &#39;will remember the entry station after the touch in&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1460,7 +1471,7 @@
 
             
 
-            <code class="ruby">    oystercard.top_up(30)</code>
+            <code class="ruby">  it &#39;will remember the entry station after the touch in&#39; do</code>
           </li>
         </div>
       
@@ -1471,7 +1482,7 @@
 
             
 
-            <code class="ruby">    oystercard.touch_in(station)</code>
+            <code class="ruby">    oystercard.top_up(30)</code>
           </li>
         </div>
       
@@ -1482,12 +1493,23 @@
 
             
 
-            <code class="ruby">    expect(oystercard.entry_station).to match_array(station)</code>
+            <code class="ruby">    oystercard.touch_in(station)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="75">
+          <li class="covered" data-hits="1" data-linenumber="75">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(oystercard.entry_station).to eq(station)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="76">
             
             
 
@@ -1498,7 +1520,172 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="76">
+          <li class="never" data-hits="" data-linenumber="77">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="78">
+            
+            
+
+            
+
+            <code class="ruby">  # User Story </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="79">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="80">
+            
+            
+
+            
+
+            <code class="ruby">  # In order to know where I have been</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="81">
+            
+            
+
+            
+
+            <code class="ruby">  # As a customer</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="82">
+            
+            
+
+            
+
+            <code class="ruby">  # I want to see all my previous trips</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="83">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="84">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;should show all previous trips&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="85">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      subject.top_up(20)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="86">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      subject.touch_in(station)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="87">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      subject.touch_out(station2)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="88">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(subject.journey_history).to match_array [{station=&gt;station2}]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="89">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="90">
+            
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="91">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="92">
             
             
 
