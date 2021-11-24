@@ -31,5 +31,10 @@ describe Journey do
     journey.exit_station(station2)
     expect(journey.complete?).to be false
   end
-  
+
+  it 'should be able to calculate fare(case: complete journey)' do
+    journey = Journey.new(station)
+    journey.exit_station(station2)
+    expect(journey.fare).to eq 1
+  end
 end
