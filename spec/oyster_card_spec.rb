@@ -1,4 +1,5 @@
-require'oyster_card'
+require 'oyster_card'
+require 'journey'
 
 describe Oystercard do
 let(:oystercard) { described_class.new}
@@ -40,6 +41,7 @@ let(:station2) {double :station2}
 
   it ' will deduct the money from balance'do
     oystercard.top_up(30)
+    oystercard.touch_in(station)
     oystercard.touch_out(station2)
     expect(oystercard.balance).to eq(29)
   end
@@ -66,13 +68,8 @@ let(:station2) {double :station2}
 
   it 'will confirm that oyster has been charged' do
     oystercard.top_up(30)
-    expect{oystercard.touch_out(station2)}.to change{oystercard.balance}.by -1
-  end
-
-  it 'will remember the entry station after the touch in' do
-    oystercard.top_up(30)
     oystercard.touch_in(station)
-    expect(oystercard.entry_station).to eq(station)
+    expect{oystercard.touch_out(station2)}.to change{oystercard.balance}.by -1
   end
 
   # User Story 
@@ -85,7 +82,7 @@ let(:station2) {double :station2}
       subject.top_up(20)
       subject.touch_in(station)
       subject.touch_out(station2)
-      expect(subject.journey_history).to match_array [{station=>station2}]
+      expect(subject.journey_history).to match_array [{station => station2}]
     end
     
 end

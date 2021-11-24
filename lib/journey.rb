@@ -8,6 +8,10 @@ class Journey
 
   end
 
+  def entry_station(station=@entry_station)
+    @entry_station = station
+  end
+
   def exit_station(station=@exit_station)
     @exit_station = station
   end
@@ -17,6 +21,6 @@ class Journey
   end
 
   def fare
-    1
+    complete? ? 1 : 6
   end
 end

@@ -5,8 +5,8 @@ describe Journey do
   let(:station2) {double :station2}
 
   it 'should be able to store an entry station' do
-    journey = Journey.new(station)
-    expect(journey.entry_station).to eq(station)
+    # journey = Journey.new(station)
+    expect(subject.entry_station(station)).to eq(station)
   end
 
   it 'should be able to store an exit station' do
@@ -36,5 +36,10 @@ describe Journey do
     journey = Journey.new(station)
     journey.exit_station(station2)
     expect(journey.fare).to eq 1
+  end
+
+  it 'should be able to calculate fare(case: incomplete journey)' do
+    journey = Journey.new(station)
+    expect(journey.fare).to eq 6
   end
 end
