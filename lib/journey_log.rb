@@ -11,4 +11,12 @@ class JourneyLog
     @journey_class.entry_station(station)
   end
 
+  def finish(station)
+    @journey_class.exit_station(station)
+  end
+
+  def current_journey
+    { @journey_class.entry_station => @journey_class.exit_station }
+  end
+
 end

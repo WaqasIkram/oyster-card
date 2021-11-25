@@ -3,6 +3,7 @@ require 'journey_log'
 describe JourneyLog do
   let(:journey) {double :journey}
   let(:station) {double :station}
+  let(:station2) {double :station}
   before do
     @log = JourneyLog.new(journey)
   end
@@ -14,7 +15,21 @@ describe JourneyLog do
     allow(journey).to receive(:entry_station).and_return(station)
     @log.start(station)
     expect(@log.journey_class.entry_station).to eq station 
-    
+  end
+
+  it "should finish the journey at an exit station" do
+    allow(journey).to receive(:entry_station).and_return(station)
+    allow(journey).to receive(:exit_station).and_return(station2)
+    @log.start(station)
+    @log.finish(station2)
+    expect(@log.journey_class.exit_station).to eq station2
+  end
+
+  it "should have a current journey method that returns an incomplete journey" do
+    allow(journey).to receive(:entry_station).and_return(station)
+    allow(journey).to receive(:exit_station)
+    @log.start(station)
+    expect(@log.current_journey).to eq ({station => nil})
   end
 
 end
