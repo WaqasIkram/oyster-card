@@ -78,11 +78,19 @@ let(:station2) {double :station2}
   # As a customer
   # I want to see all my previous trips
 
-    it 'should show all previous trips' do
-      subject.top_up(20)
-      subject.touch_in(station)
-      subject.touch_out(station2)
-      expect(subject.journey_history).to match_array [{station => station2}]
-    end
+  it 'should show all previous trips' do
+    subject.top_up(20)
+    subject.touch_in(station)
+    subject.touch_out(station2)
+    expect(subject.journey_history).to match_array [{station => station2}]
+  end
+
+  it "should log the incomplete journey when touching in twice" do
+    subject.top_up(20)
+    subject.touch_in(station)
+    subject.touch_in(station2)
+    expect(subject.journey_history).to match_array [{station => nil}]
+  end
     
+
 end
