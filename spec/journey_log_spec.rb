@@ -27,16 +27,20 @@ describe JourneyLog do
 
   it "should have a current journey method that returns an incomplete journey" do
     allow(journey).to receive(:entry_station).and_return(station)
+    allow(journey).to receive(:complete?).and_return(false)
     allow(journey).to receive(:exit_station)
     @log.start(station)
     expect(@log.current_journey).to eq ({station => nil})
   end
 
   it "should have a current journey method that creates a new journey if complete" do
-    allow(journey).to receive(:entry_station).and_return(nil)
-    allow(journey).to receive(:exit_station).and_return(nil)
-    @log.start(station)
-    @log.finish(station2)
+    # allow(journey).to receive(:entry_station).and_return(station)
+    # allow(journey).to receive(:exit_station).and_return(station2)
+    actual_log = JourneyLog.new(Journey.new)
+    actual_log.start(station)
+    actual_log.finish(station2)
+    actual_log.current_journey
+    expect(actual_log.journey_class.entry_station == nil && actual_log.journey_class.exit_station == nil ).to be true
 
   end
 

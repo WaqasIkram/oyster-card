@@ -16,7 +16,12 @@ class JourneyLog
   end
 
   def current_journey
-    { @journey_class.entry_station => @journey_class.exit_station }
+    if @journey_class.complete?
+      @journey_class.entry_station(nil)
+      @journey_class.exit_station(nil)
+    else
+      { @journey_class.entry_station => @journey_class.exit_station }
+    end
   end
 
 end

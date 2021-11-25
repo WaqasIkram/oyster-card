@@ -1,54 +1,70 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kimmorgan/Desktop/Makers/oyster-card/spec/journey_log_spec.rb": {
+      "/Users/waqasikram/Projects/week-2/oyster-card/spec/journey_log_spec.rb": {
         "lines": [
           1,
+          null,
+          1,
+          6,
+          5,
+          3,
+          1,
+          5,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/waqasikram/Projects/week-2/oyster-card/lib/journey_log.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          6,
+          null,
           null,
           1,
           4,
-          3,
-          2,
-          1,
-          3,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kimmorgan/Desktop/Makers/oyster-card/lib/journey_log.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          3,
           null,
           null,
           1,
@@ -56,19 +72,18 @@
           null,
           null,
           1,
+          2,
+          1,
           1,
           null,
-          null,
           1,
           null,
-          1,
-          0,
           null,
           null,
           null
         ]
       },
-      "/Users/kimmorgan/Desktop/Makers/oyster-card/spec/journey_spec.rb": {
+      "/Users/waqasikram/Projects/week-2/oyster-card/spec/journey_spec.rb": {
         "lines": [
           1,
           null,
@@ -117,28 +132,28 @@
           null
         ]
       },
-      "/Users/kimmorgan/Desktop/Makers/oyster-card/lib/journey.rb": {
+      "/Users/waqasikram/Projects/week-2/oyster-card/lib/journey.rb": {
         "lines": [
           1,
           null,
           1,
           null,
           1,
-          18,
-          18,
+          19,
+          19,
           null,
           null,
           null,
           1,
-          26,
+          29,
           null,
           null,
           1,
-          18,
+          21,
           null,
           null,
           1,
-          18,
+          19,
           null,
           null,
           1,
@@ -147,7 +162,7 @@
           null
         ]
       },
-      "/Users/kimmorgan/Desktop/Makers/oyster-card/spec/oyster_card_spec.rb": {
+      "/Users/waqasikram/Projects/week-2/oyster-card/spec/oyster_card_spec.rb": {
         "lines": [
           1,
           1,
@@ -247,7 +262,7 @@
           null
         ]
       },
-      "/Users/kimmorgan/Desktop/Makers/oyster-card/lib/oyster_card.rb": {
+      "/Users/waqasikram/Projects/week-2/oyster-card/lib/oyster_card.rb": {
         "lines": [
           1,
           null,
@@ -306,7 +321,7 @@
           null
         ]
       },
-      "/Users/kimmorgan/Desktop/Makers/oyster-card/spec/station_spec.rb": {
+      "/Users/waqasikram/Projects/week-2/oyster-card/spec/station_spec.rb": {
         "lines": [
           1,
           null,
@@ -325,7 +340,7 @@
           null
         ]
       },
-      "/Users/kimmorgan/Desktop/Makers/oyster-card/lib/station.rb": {
+      "/Users/waqasikram/Projects/week-2/oyster-card/lib/station.rb": {
         "lines": [
           1,
           null,
@@ -340,6 +355,6 @@
         ]
       }
     },
-    "timestamp": 1637855197
+    "timestamp": 1637856142
   }
 }
