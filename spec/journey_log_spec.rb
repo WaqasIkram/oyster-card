@@ -32,4 +32,12 @@ describe JourneyLog do
     expect(@log.current_journey).to eq ({station => nil})
   end
 
+  it "should have a current journey method that creates a new journey if complete" do
+    allow(journey).to receive(:entry_station).and_return(nil)
+    allow(journey).to receive(:exit_station).and_return(nil)
+    @log.start(station)
+    @log.finish(station2)
+
+  end
+
 end
