@@ -21,9 +21,7 @@ class Oystercard
   end
 
   def touch_in(station)
-    # deduct(@journey.fare) unless @journey.complete? || @journey.entry_station == nil #first journey
-    # @journey_history << { @journey.entry_station => @journey.exit_station} unless @journey.complete? || @journey.entry_station == nil
-    unless @journey.complete? || @journey.entry_station == nil
+   unless @journey.complete? || @journey.entry_station == nil
       deduct(@journey.fare)
       @journey_history << { @journey.entry_station => @journey.exit_station}
     end

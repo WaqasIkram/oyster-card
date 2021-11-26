@@ -3,6 +3,7 @@ require "journey"
 describe Journey do
   let(:station) {double :station}
   let(:station2) {double :station2}
+  
 
   it 'should be able to store an entry station' do
     # journey = Journey.new(station)
