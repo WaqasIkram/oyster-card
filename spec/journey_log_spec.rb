@@ -6,6 +6,7 @@ describe JourneyLog do
   let(:station2) {double :station}
   let(:journey_class) {double :journey_class, new: journey}
   
+  
 
   before do
     @log = JourneyLog.new(journey_class)
@@ -47,5 +48,21 @@ describe JourneyLog do
     expect(actual_log.journey_class.entry_station == nil && actual_log.journey_class.exit_station == nil ).to be true
 
   end
+
+  it 'should return all journyes in an array' do
+    # allow(journey).to receive(:entry_station).and_return(station)
+    # allow(journey).to receive(:exit_station).and_return(station2)
+    # @log.start(station)
+    # @log.finish(station2)
+    # array = Array.new
+    actual_log = JourneyLog.new(Journey)
+    actual_log.start(station)
+    test_array = [actual_log.current_journey]
+    test_array[0].exit_station(station2)
+    actual_log.finish(station2)
+    expect(actual_log.journeys).to match_array(test_array)
+
+  end
+
 
 end

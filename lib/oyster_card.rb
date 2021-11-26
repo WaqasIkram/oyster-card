@@ -4,13 +4,13 @@ MAXIMUM_BALANCE = 90
 MINIMUM_FARE = 1
 class Oystercard
 
-  attr_reader :balance, :in_journey, :entry_station, :journey_history
- 
-  def initialize
+  attr_reader :balance, :in_journey, :journey_log
+
+  def initialize(journey_log, journey)
     @balance = 0
-    @in_journey = false #maybe needs change?
-    @journey_history = []
-    @journey = Journey.new
+    @in_journey = false 
+    @journey_log = journey_log.new(journey)
+    # @journey = Journey.new #change/remove
   end
 
   def top_up(money)
@@ -21,11 +21,12 @@ class Oystercard
   end
 
   def touch_in(station)
-   unless @journey.complete? || @journey.entry_station == nil
-      deduct(@journey.fare)
-      @journey_history << { @journey.entry_station => @journey.exit_station}
+   unless @journey_log.current_journey.complete? || @journey_log.current_journey.entry_station == nil
+      deduct(@journey_log.current_journey.fare)
+      # @journey_history << { @journey.entry_station => @journey.exit_station}
+      @journey_log.finish(nil)
     end
-    @journey.entry_station(station)
+    @journey_log.current_journey.entry_station(station)
     if MINIMUM_FARE > @balance
       raise 'insufficient funds'
     end
@@ -33,12 +34,13 @@ class Oystercard
   end
 
   def touch_out(station)
-    @journey.exit_station(station)
-    deduct(@journey.fare) #needs change
-    @journey_history << { @journey.entry_station => @journey.exit_station} #needs change
-    @journey.entry_station(nil)
-    @journey.exit_station(nil)
-    @in_journey = false #maybe?? neeeds change
+    @journey_log.current_journey.exit_station(station)
+    deduct(@journey_log.current_journey.fare) #needs change
+    # @journey_history << { @journey.entry_station => @journey.exit_station} #needs change
+    # @journey.entry_station(nil)
+    # @journey.exit_station(nil)
+    @journey_log.finish(station)
+    @in_journey = false
   end  
 
   def in_journey? #??
